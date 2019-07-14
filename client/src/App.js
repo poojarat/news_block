@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css'
+import SearchBar from './components/SearchBar'
 
 class App extends React.Component {
   state = { serverMessage: '' }
@@ -14,6 +15,7 @@ class App extends React.Component {
     return (
       <div>
       <header>
+        <SearchBar />
         <nav id="navbox">
           <span>
             selection
