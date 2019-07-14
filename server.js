@@ -5,19 +5,18 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require("express")
 const path = require("path")
 const app = express()
+const axios = require("axios")
 
-// JUST FOR DEMO PURPOSES, PUT YOUR ACTUAL API CODE HERE
-app.get('/api/demo', (request, response) => {
-  response.json({
-    message: "Hello from server.js"
-  })
-})
 // END DEMO
 
 //API call for keyword search on home page
 app.get('/search/:query', (request, response) => {
+  console.log('key', process.env.NA_API_KEY)
   axios.get(`https://newsapi.org/v2/everything?q=${request.params.query}&apiKey=${process.env.NA_API_KEY}`)
-    .then(newsResponse => response.json(newsResponse.data.Search || []))
+    .then(newsResponse => {
+      response.send(newsResponse.data)
+    })
+    .catch(error => response.send(error))
 })
 
 
