@@ -188,37 +188,6 @@ main{
   height: 100%;
 }
 
-.windows button:nth-child(2){
-  width: 100%;
-  height: 100%;
-}
-
-.windows div:nth-child(3){
-  width: 100%;
-  height: 100%;
-}
-
-.windows div:nth-child(4){
-  width: 100%;
-  height: 100%;
-}
-
-.windows div:nth-child(5){
-  width: 100%;
-  height: 100%;
-}
-
-.windows div:nth-child(6){
-  width: 100%;
-  height: 100%;
-}
-
-.windows div:nth-child(7){
-  width: 100%;
-  height: 100%;
-}
-
-
 .windows div h1{
   display: grid;
   place-items: center;

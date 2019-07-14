@@ -82,7 +82,7 @@ class App extends React.Component {
           <div id="topnews">
             <h1>Top News</h1>
           </div>
-          {CATEGORIES_LIST.map(category => <div style={category.styles} ><h1>{category.category}</h1></div>)}
+          {CATEGORIES_LIST.map(category => <div class="winsizes"style={category.styles} ><h1>{category.category}</h1></div>)}
         </div>
       </main>
 
