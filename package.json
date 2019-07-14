@@ -5,7 +5,10 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^8.0.0",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-portal": "^4.2.0"
   },
   "scripts": {
     "start": "node server.js",
