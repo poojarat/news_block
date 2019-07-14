@@ -1,10 +1,54 @@
 /* JUST FOR DEMO PURPORSES, REPLACE WITH YOUR OWN CODE */
 
-#demo{
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+
+/* @Media */
+
+@media  (max-width: 880px) {
+  #navbox span {
+    font-size: 1rem;
+  } 
+  #navsrch{
+    width: 100%;
+  }
+  .windows{
+    margin-top: 1rem !important;
+  }
+  #logo{
+    font-size: 138% !important;
+  }
+  .windows div{
+    width: 100% !important;
+  }
+  
+  }
+
+
+/* START */
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  /* border: solid black 1px; */
+}
+
+body{
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  height: auto;
+  min-height: 100% !important;
+  object-fit: cover;
+  background-color: lightgray;
+}
+
+#root{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  object-fit: cover;
+  background-color: lightgray;
+  /* border: solid 2px black; */
 }
 
 #demo h1{
@@ -12,4 +56,154 @@
   place-items: center;
 }
 
+
+/* Navbar styling below this line */
+
+header{
+  width: 100%;
+}
+
+#navbox{
+  background-color: grey;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 6rem;
+}
+
+#navbox span form{
+  display: flex;
+  align-items: center;
+}
+
+#logo{
+  font-family: 'Spectral', serif;
+  font-size: 4rem;
+}
+
+form{
+  transform: translate(-50%,-50%);
+  transition: all 1s;
+  position: relative;
+  top: 24px;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 55px;
+  border: 4px solid white;
+  padding: 5px;
+}
+
+input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 50px;
+  padding: 0 20px;
+}
+
+.fa{
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #07051a;
+  text-align: center;
+  font-size: 1.4rem;
+  transition: all 1s;
+}
+
+form:hover{
+  position: relative;
+  left: 4rem;
+  width: 10rem;
+  cursor: pointer;
+}
+
+form:hover input{
+  display: block;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* form:hover .fa{
+  color: whi
+} */
+
+
+/* END NAVBAR */
+
+/* Main body styling below this line */
+
+main{
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.windows{
+  width: 100%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1px;
+  padding-left: 0; 
+}
+
+.windows div{
+  display: grid;
+  place-items: center;
+  background-color: ivory;
+  width: 100%;
+  height: 20rem;
+}
+
+.windows div:active{
+  
+  width: 100%;
+  height: 100%;
+}
+
+.windows button:nth-child(1){
+  width: 100%;
+  height: 100%;
+}
+
+.windows div:nth-child(2){
+  width: 80%;
+}
+
+.windows div:nth-child(3){
+  width: 40%;
+}
+
+.windows div:nth-child(4){
+  width: 120%;
+}
+
+.windows div:nth-child(5){
+  width: 100%;
+}
+
+.windows div h1{
+  display: grid;
+  place-items: center;
+}
 /* END DEMO */

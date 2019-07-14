@@ -12,10 +12,65 @@ class App extends React.Component {
 
   render(){
     return (
-      <div id="demo">
-        <h1>Hello from client/src/App.js</h1>
-        <h1>{this.state.serverMessage}</h1>
-      </div>
+      <div>
+      <header>
+        <nav id="navbox">
+          <span>
+            selection
+          </span>
+          <span id="logo">
+            News Block
+          </span>
+          <span>
+            <form id="resize" action=""> 
+              <input id="navsrch" type="search"/>
+              <i class="fa fa-search"></i>
+            </form>
+          </span>
+        </nav>
+      </header>
+      <main>
+        <div class="windows">
+          <div>
+            <h1 onClick="">TEST</h1>
+          </div>
+          <div>
+            <h1>TEST</h1>
+          </div>
+          <div>
+            <h1>TEST</h1>
+          </div>
+          <div>
+            <h1>TEST</h1>
+          </div>
+          <div>
+            <h1>TEST</h1>
+          </div>
+          <div>
+            <h1>TEST</h1>
+          </div>
+          <div>
+            <h1>TEST</h1>
+          </div>
+          <div>
+            <h1>TEST</h1>
+          </div>
+          <div>
+            <h1>TEST</h1>
+          </div>
+          <div>
+            <h1>TEST</h1>
+          </div>
+          <div>
+            <h1>TEST</h1>
+          </div>
+          <div>
+            <h1>TEST</h1>
+          </div>  
+        </div>
+      </main>
+
+    </div>
     )
   }
 }
