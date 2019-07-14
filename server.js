@@ -14,6 +14,13 @@ app.get('/api/demo', (request, response) => {
 })
 // END DEMO
 
+//API call for keyword search on home page
+app.get('/search/:query', (request, response) => {
+  axios.get(`https://newsapi.org/v2/everything?q=${request.params.query}&apiKey=${process.env.NA_API_KEY}`)
+    .then(newsResponse => response.json(newsResponse.data.Search || []))
+})
+
+
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
   app.use(express.static(path.join(__dirname, 'client/build')))
