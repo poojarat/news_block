@@ -147,12 +147,19 @@ form:hover input{
 
 /* END NAVBAR */
 
+/* Time stamp */
+
+.timeblock{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+}
+
 /* Main body styling below this line */
 
 main{
-  display: grid;
   place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   width: 100%;
   bottom: 0;
   left: 0;
@@ -160,11 +167,17 @@ main{
 
 .windows{
   width: 100%;
+  height: 50vh;
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 1px;
   padding-left: 0; 
+}
+
+#topnews{
+  grid-row: 1 / 3;
+  height: 100vh;
 }
 
 .windows div{
@@ -172,34 +185,7 @@ main{
   place-items: center;
   background-color: ivory;
   width: 100%;
-  height: 20rem;
-}
-
-.windows div:active{
-  
-  width: 100%;
   height: 100%;
-}
-
-.windows button:nth-child(1){
-  width: 100%;
-  height: 100%;
-}
-
-.windows div:nth-child(2){
-  width: 80%;
-}
-
-.windows div:nth-child(3){
-  width: 40%;
-}
-
-.windows div:nth-child(4){
-  width: 120%;
-}
-
-.windows div:nth-child(5){
-  width: 100%;
 }
 
 .windows div h1{
