@@ -140,6 +140,13 @@ form:hover{
   cursor: pointer;
 }
 
+form:active{
+  position: relative;
+  left: 4rem;
+  width: 10rem;
+  cursor: pointer;
+}
+
 form:hover input{
   display: block;
   font-family: 'Roboto', sans-serif;

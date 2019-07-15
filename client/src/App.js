@@ -54,7 +54,6 @@ class App extends React.Component {
   getNews = (input) => {
     axios.get(`/search/${input}`)
     .then((response) => console.log(response))
-    
   }
 
   render(){
