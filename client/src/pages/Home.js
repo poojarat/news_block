@@ -7,7 +7,6 @@ const Home = () => (
             <h1>TEST</h1>
         </button>
     </div>
-
 )
 
 export default Home;

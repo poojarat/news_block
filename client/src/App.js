@@ -5,6 +5,7 @@ import axios from 'axios'
 import CurrentDate from './components/CurrentDate'
 import ArticlesModal from './components/Modal'
 
+
 const CATEGORIES_LIST = [
   {
     category: 'sports',
@@ -65,6 +66,7 @@ class App extends React.Component {
 
   closeModal = () => {
     this.setState({ modalOpen: false })
+
   }
 
   render(){
@@ -85,7 +87,7 @@ class App extends React.Component {
         </nav>
       </header>
       <div className="timeblock">
-        <h1>Time</h1> | 
+        <CurrentDate /> <span>|</span>
         <h2>Todays news for a better world</h2>
       </div>
       <main>
