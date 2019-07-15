@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 import SearchBar from './components/SearchBar'
 import axios from 'axios'
+import CurrentDate from './components/CurrentDate'
 
 const CATEGORIES_LIST = [
   {
@@ -73,7 +74,7 @@ class App extends React.Component {
         </nav>
       </header>
       <div className="timeblock">
-        <h1>Time</h1> | 
+        <CurrentDate /> <span>|</span>
         <h2>Todays news for a better world</h2>
       </div>
       <main>
