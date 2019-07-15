@@ -60,6 +60,7 @@ class App extends React.Component {
     return (
       <div>
       <header>
+        <SearchBar />
         <nav id="navbox">
           <span>
             selection
