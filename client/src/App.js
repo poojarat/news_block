@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 import SearchBar from './components/SearchBar'
 import axios from 'axios'
+import CurrentDate from './components/CurrentDate'
 import ArticlesModal from './components/Modal'
 
 const CATEGORIES_LIST = [
@@ -53,14 +54,13 @@ class App extends React.Component {
 
   getNews = (input) => {
     axios.get(`/search/${input}`)
-      .then(({data}) => {
+       .then(({data}) => {
         console.log(data.articles);
         const articles = data.articles,
               articlesLength = articles.length;
         this.setState({ modalOpen: true, articles: articlesLength ? articles : [] })
       })
       .catch(err => console.log(err));
-    
   }
 
   closeModal = () => {
