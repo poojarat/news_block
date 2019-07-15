@@ -49,11 +49,16 @@ const CATEGORIES_LIST = [
 ]
 
 class App extends React.Component {
-  state = { serverMessage: '' }
+  state = { serverMessage: '', articles: [], modalOpen: false }
 
   getNews = (input) => {
     axios.get(`/search/${input}`)
     .then((response) => console.log(response))
+  }
+
+  categoryArticles = (category) => {
+    axios.get(`/api/${category}`)
+    .then((response) => this.setState({articles: response.data, modalOpen: true})) 
   }
 
   render(){
@@ -78,10 +83,24 @@ class App extends React.Component {
       </div>
       <main>
         <div className="windows">
-          <div id="topnews">
+          <div id="topnews"
+            onClick= { () => this.categoryArticles('general')}
+            style= {{cursor: 'pointer'}}>
             <h1>Top News</h1>
           </div>
-          {CATEGORIES_LIST.map(category => <div key={category.category} className="winsizes"style={category.styles} ><h1>{category.category}</h1></div>)}
+          {
+            CATEGORIES_LIST.map( category => {
+              return(
+                <div 
+                  key={category.category}
+                  className="winsizes"
+                  style={  {...category.styles, cursor: 'pointer'} }
+                  onClick= { () => this.categoryArticles(category.category) }>
+                    <h1>{category.category}</h1>
+                </div>
+              )
+            })
+          }
         </div>
       </main>
 
