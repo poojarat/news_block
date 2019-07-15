@@ -19,7 +19,7 @@ class SearchBar extends React.Component {
     console.log(this.props)
     return(
       <form id="resize" onSubmit={this.handleSubmit}> 
-      <input id="navsrch" type="search" autoComplete="off" onChange={this.handleChange} />
+      <input id="navsrch" type="search" onChange={this.handleChange} />
       <i className="fa fa-search"></i>
     </form>
     )
