@@ -88,6 +88,26 @@ header{
   font-size: 4rem;
 }
 
+.navbutton{
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.menustyles{
+  position: absolute;
+  width: 100px;
+  height: 200px;
+  border: black 2px solid;
+  z-index: 4;
+  background-color: whitesmoke;
+}
+
+.navwrapper{
+  display: flex;
+  flex-direction: column;
+}
+
 form{
   transform: translate(-50%,-50%);
   transition: all 1s;

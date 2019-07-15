@@ -5,7 +5,18 @@ import Home from './pages/Home'
 
 
 class App extends React.Component {
-  state = { serverMessage: '' }
+  state = { 
+    serverMessage: '',
+    showNav: false,
+  }
+
+  toggleNav = () => {
+    if (this.state.showNav) {
+      this.setState({ showNav: false })
+    } else {
+      this.setState({ showNav: true })
+    }
+  }
 
   getNews = (input) => {
     axios.get(`/search/${input}`)
@@ -14,7 +25,7 @@ class App extends React.Component {
 
   render(){
     return (
-      <Home getNews={this.getNews} />
+      <Home getNews={this.getNews} show={this.state.showNav} toggleNav={this.toggleNav}/>
     )
   }
 }
