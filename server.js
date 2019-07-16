@@ -11,7 +11,6 @@ const axios = require("axios")
 
 //API call for keyword search on home page
 app.get('/search/:query', (request, response) => {
-  console.log('key', process.env.NA_API_KEY)
   axios.get(`https://newsapi.org/v2/everything?q=${request.params.query}&apiKey=${process.env.NA_API_KEY}`)
     .then(newsResponse => {
       response.send(newsResponse.data)

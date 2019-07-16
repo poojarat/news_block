@@ -14,7 +14,7 @@ const ArticlesModal = props => {
         {
           props.articles.map(article => (
             <li key={article.url}>
-              <a href={article.url}>{article.title}</a>
+              <a target="_blank" href={article.url}>{article.title}</a>
             </li>
           ))
         }

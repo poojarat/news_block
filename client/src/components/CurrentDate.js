@@ -18,7 +18,7 @@ import React from 'react';
 
       render(){
         return(
-          <h1>{this.state.time}</h1>
+          <h1 className="clockstyles">{this.state.time}</h1>
         )
       }
     }

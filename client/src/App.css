@@ -1,6 +1,3 @@
-/* JUST FOR DEMO PURPORSES, REPLACE WITH YOUR OWN CODE */
-
-
 /* @Media */
 
 @media  (max-width: 880px) {
@@ -24,11 +21,23 @@
     font-size: .6rem;
     padding-top: 1rem;
   }
+  .clockstyles{
+    font-size: 1rem !important;
+  }
   
   }
 
 
 /* START */
+a:link{
+  text-decoration: none;
+  font-family: 'DM Serif Display', serif;
+}
+
+a:visited{
+  color: black;
+}
+
 *{
   margin: 0;
   box-sizing: border-box;
@@ -43,7 +52,7 @@ body{
   height: auto;
   min-height: 100% !important;
   object-fit: cover;
-  background-color: lightgray;
+  background-color:rgb(68, 146, 180) ;
 }
 
 #root{
@@ -69,7 +78,7 @@ header{
 }
 
 #navbox{
-  background-color: grey;
+  background-color:rgb(68, 146, 180) ;
   display: flex;
   align-self: center;
   align-items: center;
@@ -86,6 +95,30 @@ header{
 #logo{
   font-family: 'Spectral', serif;
   font-size: 4rem;
+}
+
+.navbutton{
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.menustyles{
+  position: absolute;
+  left: 60;
+  height: 50vh;
+  width: 46vh;
+  padding-top: 6rem;
+  padding-left: 3rem;
+  line-height: 4rem;
+  font-size: 2rem;
+  z-index: 4;
+  background-color: white;
+}
+
+.navwrapper{
+  display: flex;
+  flex-direction: column;
 }
 
 form{
@@ -140,6 +173,10 @@ form:hover{
   cursor: pointer;
 }
 
+.fa-search{
+  background-image: url('/client/public/images')
+}
+
 form:active{
   position: relative;
   left: 4rem;
@@ -152,27 +189,28 @@ form:hover input{
   font-family: 'Roboto', sans-serif;
 }
 
-/* form:hover .fa{
-  color: whi
-} */
-
-
 /* END NAVBAR */
 
 /* Time stamp */
 
 .timeblock{
+  background-color: rgb(5, 58, 87);
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 3rem;
-  margin-left: 3rem;
+  padding-left: 4rem;
 }
 
 
 .timeblock span{
   margin-left: 3rem;
   margin-right: 3rem;
+}
+
+.clockstyles{
+  font-size: 1.7rem;
 }
 
 /* Main body styling below this line */
@@ -198,18 +236,26 @@ main{
 #topnews{
   grid-row: 1 / 3;
   height: 81vh;
+  background-color: rgb(215, 92, 53)
 }
 
 .windows div{
   display: grid;
   place-items: center;
-  background-color: ivory;
   width: 100%;
-  height: 40.5vh;
+  height: 100%;
+
+  
 }
 
 .windows div h1{
   display: grid;
   place-items: center;
+  font-family: 'DM Serif Display', serif;
+  font-size: 3rem;
+
 }
-/* END DEMO */
+
+.clickable {
+  cursor: pointer;
+}
