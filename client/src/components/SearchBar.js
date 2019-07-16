@@ -13,15 +13,16 @@ class SearchBar extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault()
     this.props.getNews(this.state.input)
+    console.log(this.state.input)
   }
 
   render(){
     console.log(this.props)
     return(
       <form id="resize" onSubmit={this.handleSubmit}> 
-      <input id="navsrch" type="search" onChange={this.handleChange} />
-      <i className="fa fa-search"></i>
-    </form>
+        <input id="navsrch" type="search" onChange={this.handleChange} />
+        <i className="fa fa-search"></i>
+      </form>
     )
   }
 }

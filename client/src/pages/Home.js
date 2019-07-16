@@ -3,7 +3,6 @@ import '../App.css';
 import SearchBar from '../components/SearchBar'
 import CurrentDate from '../components/CurrentDate'
 import DropMenu from '../components/DropMenu/DropMenu'
-import Menu from '../components/DropMenu/Menu'
 
 
 

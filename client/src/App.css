@@ -69,7 +69,7 @@ header{
 }
 
 #navbox{
-  background-color: grey;
+  background-color: red;
   display: flex;
   align-self: center;
   align-items: center;
@@ -96,8 +96,11 @@ header{
 
 .menustyles{
   position: absolute;
-  width: 100px;
-  height: 200px;
+  left: 0;
+  height: 50vh;
+  width: 46vh;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
   border: black 2px solid;
   z-index: 4;
   background-color: whitesmoke;
@@ -160,6 +163,10 @@ form:hover{
   cursor: pointer;
 }
 
+.fa-search{
+  background-image: url('/client/public/images')
+}
+
 form:active{
   position: relative;
   left: 4rem;
@@ -182,11 +189,13 @@ form:hover input{
 /* Time stamp */
 
 .timeblock{
+  background-color: black;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 3rem;
-  margin-left: 3rem;
+  padding-left: 4rem;
 }
 
 
