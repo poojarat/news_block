@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 import axios from 'axios'
 import Home from './pages/Home'
+import ArticlesModal from './components/Modal'
 
 
 
@@ -10,6 +11,8 @@ class App extends React.Component {
   state = { 
     serverMessage: '',
     showNav: false,
+    modalOpen: false,
+    articles: [],
   }
 
   toggleNav = () => {
@@ -19,8 +22,6 @@ class App extends React.Component {
       this.setState({ showNav: true })
     }
   }
-
-  state = { serverMessage: '', articles: [], modalOpen: false }
 
   getNews = (input) => {
     axios.get(`/search/${input}`)
@@ -38,11 +39,29 @@ class App extends React.Component {
 
   }
 
+  categoryArticles = (category) => {
+    axios.get(`/api/${category}`)
+    .then((response) => this.setState({articles: response.data, modalOpen: true}))
+  }
+
   render(){
     return (
-      <Home getNews={this.getNews} show={this.state.showNav} toggleNav={this.toggleNav}/>
+      <div>
+        <Home getNews={this.getNews} articles={this.state.articles} show={this.state.showNav} toggleNav={this.toggleNav}/>
+        <ArticlesModal
+          open={this.state.modalOpen}
+          articles={this.state.articles}
+          closeModal={this.closeModal}
+        />
+      </div>
     )
   }
 }
 
 export default App
+
+
+
+
+
+ 

@@ -2,9 +2,10 @@ import React from 'react';
 import '../App.css';
 import SearchBar from '../components/SearchBar'
 import CurrentDate from '../components/CurrentDate'
-import Menu from '../components/DropMenu/Menu';
 // import { url } from 'inspector';
-// import ArticlesModal from './components/Modal'
+import Menu from '../components/DropMenu/Menu'
+import ArticlesModal from '../components/Modal'
+import DropDown from '../components/DropMenu/DropMenu';
 
 
 
@@ -12,7 +13,6 @@ const CATEGORIES_LIST = [
     {
       category: 'Sports',
       styles: {
-        overflow: "hidden",
         backgroundColor: "rgb(255, 120, 53)"
       }
     },
@@ -50,18 +50,16 @@ const CATEGORIES_LIST = [
 
 const Home = (props) => (
   <div>
-    <Menu />
   <header>
-    <SearchBar />
     <nav id="navbox">
       <span>
-        selection
+        <DropDown toggleNav={ props.toggleNav } show={ props.show }/>
       </span>
       <span id="logo">
         News Block
       </span>
       <span>
-        <SearchBar getNews={ this.getNews() } />
+        <SearchBar getNews={ props.getNews } />
       </span>
     </nav>
   </header>
@@ -71,17 +69,15 @@ const Home = (props) => (
   </div>
   <main>
     <div className="windows">
-      <div id="topnews">
+      <div id="topnews"
+      onClick= { () => this.categoryArticles('general')}
+      style={{ cursor: 'pointer' }}
+      >
         <h1>Top News</h1>
       </div>
       {CATEGORIES_LIST.map(category => <div key={category.category} className="winsizes"style={category.styles} ><h1>{category.category}</h1></div>)}
     </div>
   </main>
-  {/* <ArticlesModal
-    open={this.state.modalOpen}
-    articles={this.state.articles}
-    closeModal={this.closeModal}
-  /> */}
   </div>
 )
 
