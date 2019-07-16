@@ -229,6 +229,10 @@ main {
   grid-template-columns: 1fr 1fr;
 }
 
+#topnews{
+  background-color: rgb(226, 21, 53);
+}
+
 #topnews, #right-side{
   height: calc(100vh - 144px);
 }
