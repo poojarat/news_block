@@ -78,7 +78,6 @@ class App extends React.Component {
     return (
       <div>
       <header>
-        <SearchBar />
         <nav id="navbox">
           <span>
             selection
@@ -87,7 +86,7 @@ class App extends React.Component {
             News Block
           </span>
           <span>
-            <SearchBar getNews={ this.getNews() } />
+            <SearchBar getNews={ this.getNews } />
           </span>
         </nav>
       </header>
