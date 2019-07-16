@@ -3,7 +3,7 @@
 @media  (max-width: 880px) {
   #navbox span {
     font-size: 1rem;
-  } 
+  }
   #navsrch{
     width: 100%;
   }
@@ -24,7 +24,11 @@
   .clockstyles{
     font-size: 1rem !important;
   }
-  
+
+  main h1 {
+    font-size: 1rem;
+  }
+
   }
 
 
@@ -215,45 +219,24 @@ form:hover input{
 
 /* Main body styling below this line */
 
-main{
-  place-items: center;
-  width: 100%;
-  height: 60vh;
-  bottom: 0;
-  left: 0;
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
-.windows{
-  width: 100%;
-  height: 100%;
+#right-side{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#topnews, #right-side{
+  height: calc(100vh - 144px);
+}
+
+#topnews, .category{
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-gap: 1px;
-  padding-left: 0; 
-}
-
-#topnews{
-  grid-row: 1 / 3;
-  height: 81vh;
-  background-color: rgb(215, 92, 53)
-}
-
-.windows div{
-  display: grid;
-  place-items: center;
-  width: 100%;
-  height: 100%;
-
-  
-}
-
-.windows div h1{
-  display: grid;
-  place-items: center;
-  font-family: 'DM Serif Display', serif;
-  font-size: 3rem;
-
+  text-align: center;
 }
 
 .clickable {

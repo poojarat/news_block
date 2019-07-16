@@ -23,9 +23,8 @@ class App extends React.Component {
   getNews = (input) => {
     axios.get(`/search/${input}`)
        .then(({data}) => {
-        console.log(data.articles);
         const articles = data.articles,
-              articlesLength = articles.length;
+        articlesLength = articles.length;
         this.setState({ modalOpen: true, articles: articlesLength ? articles : [] })
       })
       .catch(err => console.log(err));
@@ -33,7 +32,6 @@ class App extends React.Component {
 
   closeModal = () => {
     this.setState({ modalOpen: false })
-
   }
 
   categoryArticles = (category) => {

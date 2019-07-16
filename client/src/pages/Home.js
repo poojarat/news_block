@@ -63,19 +63,20 @@ const Home = (props) => (
     <h2>Todays news for a better world</h2>
   </div>
   <main>
-    <div className="windows">
-      <div
-        id="topnews"
-        onClick= { () => props.categoryArticles('general')}
-        className="clickable"
-      >
-        <h1>Top News</h1>
-      </div>
+
+    <div
+      id="topnews"
+      onClick= { () => props.categoryArticles('general')}
+      className="clickable"
+    >
+      <h1>Top News</h1>
+    </div>
+    <div id="right-side">
       {
         CATEGORIES_LIST.map(category => (
           <div
             key={category.category}
-            className="winsizes clickable"
+            className="clickable category"
             style={category.styles}
             onClick={ () => props.categoryArticles(category.category)}
           >
