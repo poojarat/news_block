@@ -2,12 +2,7 @@ import React from 'react';
 import '../App.css';
 import SearchBar from '../components/SearchBar'
 import CurrentDate from '../components/CurrentDate'
-// import { url } from 'inspector';
-import Menu from '../components/DropMenu/Menu'
-import ArticlesModal from '../components/Modal'
 import DropDown from '../components/DropMenu/DropMenu';
-
-
 
 const CATEGORIES_LIST = [
     {
@@ -69,13 +64,25 @@ const Home = (props) => (
   </div>
   <main>
     <div className="windows">
-      <div id="topnews"
-      onClick= { () => this.categoryArticles('general')}
-      style={{ cursor: 'pointer' }}
+      <div
+        id="topnews"
+        onClick= { () => props.categoryArticles('general')}
+        className="clickable"
       >
         <h1>Top News</h1>
       </div>
-      {CATEGORIES_LIST.map(category => <div key={category.category} className="winsizes"style={category.styles} ><h1>{category.category}</h1></div>)}
+      {
+        CATEGORIES_LIST.map(category => (
+          <div
+            key={category.category}
+            className="winsizes clickable"
+            style={category.styles}
+            onClick={ () => props.categoryArticles(category.category)}
+          >
+            <h1>{category.category}</h1>
+          </div>
+        ))
+      }
     </div>
   </main>
   </div>

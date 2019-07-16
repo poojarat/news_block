@@ -44,7 +44,13 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        <Home getNews={this.getNews} articles={this.state.articles} show={this.state.showNav} toggleNav={this.toggleNav}/>
+        <Home
+          getNews={this.getNews}
+          articles={this.state.articles}
+          show={this.state.showNav}
+          toggleNav={this.toggleNav}
+          categoryArticles={this.categoryArticles}
+        />
         <ArticlesModal
           open={this.state.modalOpen}
           articles={this.state.articles}
