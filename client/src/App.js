@@ -4,9 +4,6 @@ import axios from 'axios'
 import Home from './pages/Home'
 import ArticlesModal from './components/Modal'
 
-
-
-
 class App extends React.Component {
   state = { 
     serverMessage: '',
@@ -41,7 +38,7 @@ class App extends React.Component {
 
   categoryArticles = (category) => {
     axios.get(`/api/${category}`)
-    .then((response) => this.setState({articles: response.data, modalOpen: true}))
+      .then((response) => this.setState({articles: response.data, modalOpen: true}))
   }
 
   render(){
@@ -59,9 +56,3 @@ class App extends React.Component {
 }
 
 export default App
-
-
-
-
-
- 
