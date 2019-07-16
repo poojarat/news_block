@@ -3,49 +3,46 @@ import '../App.css';
 import SearchBar from '../components/SearchBar'
 import CurrentDate from '../components/CurrentDate'
 import DropMenu from '../components/DropMenu/DropMenu'
+// import { url } from 'inspector';
 
 
 
 const CATEGORIES_LIST = [
     {
-      category: 'sports',
+      category: 'Sports',
       styles: {
         overflow: "hidden",
+        backgroundColor: "rgb(255, 120, 53)"
       }
     },
     {
-      category: 'health',
+      category: 'Health',
       styles: {
-        // height: 50,
-        // width: 100,
+        backgroundColor: "rgb(210, 95, 53)"
       }
     },
     {
-      category: 'entertainment',
+      category: 'Entertainment',
       styles: {
-        // height: 50,
-        // width: 100,
+        backgroundColor: "rgb(255, 92, 53)"
       }
     },
     {
-      category: 'business',
+      category: 'Business',
       styles: {
-        // height: 50,
-        // width: 100,
+        backgroundColor: "rgb(255, 198, 53)"
       }
     },
     {
-      category: 'technology',
+      category: 'Technology',
       styles: {
-        // height: 50,
-        // width: 100,
+        backgroundColor: "rgb(255, 92, 53)"
       }
     },
     {
-      category: 'science',
+      category: 'Science',
       styles: {
-        // height: 50,
-        // width: 100,
+        backgroundColor: "rgb(255, 198, 53)"
       }
     },
   ]
@@ -67,7 +64,7 @@ const Home = (props) => (
       </header>
       <div className="timeblock">
         <CurrentDate /> <span>|</span>
-        <h2>Todays news for a better world</h2>
+        <h2>Todays News For a Better World</h2>
       </div>
       <main>
         <div className="windows">
