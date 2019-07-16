@@ -10,7 +10,7 @@ const CATEGORIES_LIST = [
     {
       category: 'Sports',
       styles: {
-        backgroundColor: "rgb(255, 120, 53)"
+        backgroundColor: "rgb(221, 148, 98)"
       }
     },
     {
@@ -40,7 +40,7 @@ const CATEGORIES_LIST = [
     {
       category: 'Science',
       styles: {
-        backgroundColor: "rgb(221, 148, 98)"
+        backgroundColor: "rgb(255, 120, 53)"
       }
     },
   ]

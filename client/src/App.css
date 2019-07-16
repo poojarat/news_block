@@ -268,3 +268,7 @@ hr{
 .srcstyles{
   font-weight: bolder;
 }
+
+.clickable:active{
+  background-color: red !important;
+}
