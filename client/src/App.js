@@ -69,11 +69,15 @@ class App extends React.Component {
 
   }
 
+  categoryArticles = (category) => {
+    axios.get(`/api/${category}`)
+    .then((response) => this.setState({articles: response.data, modalOpen: true})) 
+  }
+
   render(){
     return (
       <div>
       <header>
-        <SearchBar />
         <nav id="navbox">
           <span>
             selection
@@ -82,7 +86,7 @@ class App extends React.Component {
             News Block
           </span>
           <span>
-            <SearchBar getNews={ this.getNews() } />
+            <SearchBar getNews={ this.getNews } />
           </span>
         </nav>
       </header>
@@ -92,10 +96,24 @@ class App extends React.Component {
       </div>
       <main>
         <div className="windows">
-          <div id="topnews">
+          <div id="topnews"
+            onClick= { () => this.categoryArticles('general')}
+            style= {{cursor: 'pointer'}}>
             <h1>Top News</h1>
           </div>
-          {CATEGORIES_LIST.map(category => <div key={category.category} className="winsizes"style={category.styles} ><h1>{category.category}</h1></div>)}
+          {
+            CATEGORIES_LIST.map( category => {
+              return(
+                <div 
+                  key={category.category}
+                  className="winsizes"
+                  style={  {...category.styles, cursor: 'pointer'} }
+                  onClick= { () => this.categoryArticles(category.category) }>
+                    <h1>{category.category}</h1>
+                </div>
+              )
+            })
+          }
         </div>
       </main>
       <ArticlesModal
