@@ -3,6 +3,8 @@ import '../App.css';
 import SearchBar from '../components/SearchBar'
 import CurrentDate from '../components/CurrentDate'
 import DropDown from '../components/DropMenu/DropMenu';
+import ArticlesModal from '../components/Modal.js'
+import axios from 'axios'
 
 const CATEGORIES_LIST = [
     {
@@ -43,18 +45,52 @@ const CATEGORIES_LIST = [
     },
   ]
 
-const Home = (props) => (
+class Home extends React.Component  {
+  state = { 
+    showNav: false,
+    modalOpen: false,
+    articles: []
+  }
+
+  toggleNav = () => {
+    if (this.state.showNav) {
+      this.setState({ showNav: false })
+    } else {
+      this.setState({ showNav: true })
+    }
+  }
+
+  getNews = (input) => {
+    axios.get(`/search/${input}`)
+       .then(({data}) => {
+        const articles = data.articles,
+        articlesLength = articles.length;
+        this.setState({ modalOpen: true, articles: articlesLength ? articles : [] })
+      })
+      .catch(err => console.log(err));
+  }
+
+  closeModal = () => {
+    this.setState({ modalOpen: false })
+  }
+
+  categoryArticles = (category) => {
+    axios.get(`/api/${category}`)
+      .then((response) => this.setState({articles: response.data, modalOpen: true}))
+  }
+  render() {
+    return (
   <div>
   <header>
     <nav id="navbox">
       <span>
-        <DropDown toggleNav={ props.toggleNav } show={ props.show }/>
+        <DropDown toggleNav={ this.toggleNav } show={ this.show }/>
       </span>
       <span id="logo">
         News Block
       </span>
       <span>
-        <SearchBar getNews={ props.getNews } />
+        <SearchBar getNews={ this.getNews } />
       </span>
     </nav>
   </header>
@@ -66,7 +102,7 @@ const Home = (props) => (
 
     <div
       id="topnews"
-      onClick= { () => props.categoryArticles('general')}
+      onClick= { () => this.categoryArticles('general')}
       className="clickable"
     >
       <h1>Top News</h1>
@@ -78,7 +114,7 @@ const Home = (props) => (
             key={category.category}
             className="clickable category"
             style={category.styles}
-            onClick={ () => props.categoryArticles(category.category)}
+            onClick={ () => this.categoryArticles(category.category)}
           >
             <h1>{category.category}</h1>
           </div>
@@ -86,7 +122,14 @@ const Home = (props) => (
       }
     </div>
   </main>
-  </div>
+  <ArticlesModal
+          open={this.state.modalOpen}
+          articles={this.state.articles}
+          closeModal={this.closeModal}
+          />
+          </div>
 )
+  }
+}
 
 export default Home;
