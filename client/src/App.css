@@ -7,30 +7,48 @@
   #navsrch{
     width: 100%;
   }
+  #navbox{
+    width: 90%;
+  }
   .windows{
     margin-top: 1rem !important;
   }
-  #logo{
-    font-size: 2.5rem !important;
+  .clickable h1{
+    font-size: 1.2rem !important;
   }
-  .windows div{
-    width: 100% !important;
-    height: 30vh !important;
+  #logo{
+    font-size: 1.8rem !important;
   }
   .timeblock{
-    font-size: .6rem;
+    width: 100%;
     padding-top: 1rem;
   }
   .clockstyles{
     font-size: 1rem !important;
+    margin-right: 3.4rem;
   }
-
-  main h1 {
-    font-size: 1rem;
+  .dissapear{
+    display: none;
   }
-
+  #resize:hover{
+    position: relative;
+    left: 4rem;
+    width: 6rem;
+    cursor: pointer;
   }
-
+  .menustyles h3{
+    font-size: 1.5rem;
+  }
+  .menustyles{
+    height: 18rem !important;
+    width: 11rem !important;
+    padding-top: 4rem !important;
+    padding-left: 3rem !important;
+    line-height: 3.4rem !important;
+    font-size: 2rem !important;
+    z-index: 4 !important;
+  }
+}
 
 /* START */
 a:link{
@@ -53,6 +71,7 @@ body{
   flex-flow: column;
   position: relative;
   height: auto;
+  width: 100%;
   min-height: 100% !important;
   object-fit: cover;
   background-color:rgb(68, 146, 180) ;
@@ -108,8 +127,8 @@ header{
 .menustyles{
   position: absolute;
   left: 60;
-  height: 50vh;
-  width: 46vh;
+  height: 44vh;
+  width: 33vh;
   padding-top: 6rem;
   padding-left: 3rem;
   line-height: 4rem;
@@ -175,6 +194,22 @@ form:hover, form.filled{
 }
 
 
+form:hover input{
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  z-index: 0;
+}
+
+
+
+/* clears the 'X' from SearchBar Across Multiple Clients */
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
 
 /* END NAVBAR */
 
@@ -187,7 +222,6 @@ form:hover, form.filled{
   justify-content: center;
   align-items: center;
   height: 3rem;
-  padding-left: 4rem;
 }
 
 
@@ -210,6 +244,7 @@ main {
 #right-side{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  
 }
 
 #topnews{
@@ -229,6 +264,13 @@ main {
 .clickable {
   cursor: pointer;
 }
+
+.clickable h1{
+  font-family: 'DM Serif Display', serif;
+  font-size: 3rem;
+  font-style: italic;
+}
+
 
 /* MODAL STYLING */
 
@@ -262,5 +304,5 @@ hr{
 }
 
 .clickable:active{
-  background-color: red !important;
+  background-color: rgb(255, 198, 53) !important;
 }

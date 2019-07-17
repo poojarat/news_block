@@ -95,8 +95,8 @@ class Home extends React.Component  {
           </nav>
         </header>
         <div className="timeblock">
-          <CurrentDate /> <span>|</span>
-          <h2>Today's news for a better world</h2>
+          <CurrentDate /> <span className="dissapear">|</span>
+          <h2 className="dissapear">Today's news for a better world</h2>
         </div>
         <main>
           <div
