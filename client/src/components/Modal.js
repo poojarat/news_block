@@ -1,6 +1,5 @@
 import React from 'react'
 import Modal from 'react-responsive-modal'
-import { Z_FILTERED } from 'zlib';
 
 const ArticlesModal = props => {
   return(

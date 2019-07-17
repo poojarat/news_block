@@ -80,55 +80,54 @@ class Home extends React.Component  {
   }
   render() {
     return (
-  <div>
-  <header>
-    <nav id="navbox">
-      <span>
-        <DropDown toggleNav={ this.toggleNav } show={ this.state.showNav }/>
-      </span>
-      <span id="logo">
-        News Block
-      </span>
-      <span>
-        <SearchBar getNews={ this.getNews } />
-      </span>
-    </nav>
-  </header>
-  <div className="timeblock">
-    <CurrentDate /> <span>|</span>
-    <h2>Today's news for a better world</h2>
-  </div>
-  <main>
-
-    <div
-      id="topnews"
-      onClick= { () => this.categoryArticles('general')}
-      className="clickable"
-    >
-      <h1>Top News</h1>
-    </div>
-    <div id="right-side">
-      {
-        CATEGORIES_LIST.map(category => (
+      <div>
+        <header>
+          <nav id="navbox">
+            <span>
+              <DropDown toggleNav={ this.toggleNav } show={ this.state.showNav }/>
+            </span>
+            <span id="logo">
+              News Block
+            </span>
+            <span>
+              <SearchBar getNews={ this.getNews } />
+            </span>
+          </nav>
+        </header>
+        <div className="timeblock">
+          <CurrentDate /> <span>|</span>
+          <h2>Today's news for a better world</h2>
+        </div>
+        <main>
           <div
-            key={category.category}
-            className="clickable category"
-            style={category.styles}
-            onClick={ () => this.categoryArticles(category.category)}
+            id="topnews"
+            onClick= { () => this.categoryArticles('general')}
+            className="clickable"
           >
-            <h1>{category.category}</h1>
+            <h1>Top News</h1>
           </div>
-        ))
-      }
-    </div>
-  </main>
-  <ArticlesModal
+          <div id="right-side">
+            {
+              CATEGORIES_LIST.map(category => (
+                <div
+                  key={category.category}
+                  className="clickable category"
+                  style={category.styles}
+                  onClick={ () => this.categoryArticles(category.category)}
+                >
+                  <h1>{category.category}</h1>
+                </div>
+              ))
+            }
+          </div>
+        </main>
+        <ArticlesModal
           open={this.state.modalOpen}
           articles={this.state.articles}
           closeModal={this.closeModal}
           />
-          </div>
-)
+      </div>
+    )
   }
 }
 
