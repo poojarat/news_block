@@ -174,9 +174,7 @@ form:hover, form.filled{
   cursor: pointer;
 }
 
-.fa-search{
-  background-image: url('/client/public/images')
-}
+
 
 /* END NAVBAR */
 
