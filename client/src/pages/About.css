@@ -1,0 +1,54 @@
+#about-box {
+  height: 100vh;
+  margin: 0 15%;
+  background-color: rgb(110, 176, 204);
+}
+
+#about-wrapper {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  height: 100vh;
+}
+
+.about-container-1 {
+  margin-top: 2%;
+  font-size: 3rem;
+  font-family: 'Spectral', serif;
+}
+
+.about-container-2 {
+  justify-items: center;
+  display: flex;
+  margin-top: 10%;
+  flex-direction: row;
+}
+
+#about-attribution {
+  position: fixed;
+  bottom: 0;
+  right: 17%;
+  color: rgb(44, 44, 44);
+}
+
+.about-imgs {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* padding: 15px; */
+}
+
+.about-imgs img {
+  max-width: 35%;
+  height: auto;
+  cursor: auto;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}

@@ -193,11 +193,13 @@ form:hover, form.filled{
   cursor: pointer;
 }
 
+
 form:hover input{
   display: block;
   font-family: 'Roboto', sans-serif;
   z-index: 0;
 }
+
 
 
 /* clears the 'X' from SearchBar Across Multiple Clients */

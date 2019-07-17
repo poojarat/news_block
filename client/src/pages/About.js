@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css';
+import './About.css'
 import SearchBar from '../components/SearchBar'
 import CurrentDate from '../components/CurrentDate'
 import DropDown from '../components/DropMenu/DropMenu'
@@ -55,17 +55,55 @@ class About extends React.Component {
         <CurrentDate /> <span>|</span>
         <h2>Todays news for a better world</h2>
       </div>
-      <div>
-        <h1>About News Block</h1>
-        <hr/>
-        <h1>Our Mission</h1>
-        <p>News Block is designed to be a more streamlined news aggregator, giving you the information you need with less sorting through the articles you don't.</p>
-        <h1>The Team</h1>
-        <p>Mixolidia Gautreaux</p>
-        <p>Timothy Martinez</p>
-        <p>Tushar Poojara</p>
-        <p>Meade McCoy (UX/UI)</p>
-        <h2>Powered by NewsApi</h2>
+      <div id="about-box">
+        <div id="about-wrapper">
+          <div className="about-container-1">
+            News Block Team
+          </div>
+          <div className="about-container-2">
+            <div className="about-imgs">
+              <img src="images/GautreauxMixolidia.jpg"></img>
+              Mixolidia Gautreaux
+              <span>
+                <a href="https://github.com/mixolidia">GitHub</a>
+              </span>
+              <span>
+                <a href="http://linkedin.com/in/mixolidia">Linkediin</a>
+              </span>
+            </div>
+            <div className="about-imgs">
+              <img src="images/MartinezTimothy.jpg"></img>
+              Timothy Martinez
+                <span>
+                  <a href="https://github.com/TimothyMartinez">GitHub</a>
+                </span>
+                <span>
+                  <a href="https://www.linkedin.com/in/timothy-martinez-6a5a36187/">
+                    Linkedin
+                  </a>
+                </span>
+            </div>
+          </div>
+          <div className="about-container-2">
+            <div className="about-imgs">
+              <img src="images/PoojaraTushar.jpg"></img>
+              Tushar Poojara
+              <span>
+                <a href="https://github.com/poojarat">GitHub</a>
+              </span>
+              </div>
+              <div className="about-imgs">
+                <img src="images/McCoyMeade.jpg"></img>
+                Meade McCoy
+                <span>
+                  <a href="https://www.linkedin.com/in/meademccoy/">Linkedin</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div id="about-attribution">
+            Powered by NewsAPI
+          </div>
       </div>
       <ArticlesModal 
         open={this.state.modalOpen}
