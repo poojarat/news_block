@@ -24,7 +24,7 @@ const ArticlesModal = props => {
           props.articles.map(article => (
             
             <li key={article.url}>
-              <h3>{<a target="_blank" href={article.url}>{article.title}</a>}</h3>
+              <h3>{<a target="_blank" rel="noopener noreferrer" href={article.url}>{article.title}</a>}</h3>
               <span>{ article.publishedAt.slice(0, 10) }</span>
               <h4>{article.description}</h4>
               <p>

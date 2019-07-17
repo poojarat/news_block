@@ -62,7 +62,7 @@ class About extends React.Component {
           </div>
           <div className="about-container-2">
             <div className="about-imgs">
-              <img src="images/GautreauxMixolidia.jpg"></img>
+              <img src="images/GautreauxMixolidia.jpg" alt="Mixolidia Gautreaux"></img>
               Mixolidia Gautreaux
               <span>
                 <a href="https://github.com/mixolidia">GitHub</a>
@@ -72,7 +72,7 @@ class About extends React.Component {
               </span>
             </div>
             <div className="about-imgs">
-              <img src="images/MartinezTimothy.jpg"></img>
+              <img src="images/MartinezTimothy.jpg" alt="Timothy Martinez"></img>
               Timothy Martinez
                 <span>
                   <a href="https://github.com/TimothyMartinez">GitHub</a>
@@ -86,14 +86,14 @@ class About extends React.Component {
           </div>
           <div className="about-container-2">
             <div className="about-imgs">
-              <img src="images/PoojaraTushar.jpg"></img>
+              <img src="images/PoojaraTushar.jpg" alt="Tushar Poojara"></img>
               Tushar Poojara
               <span>
                 <a href="https://github.com/poojarat">GitHub</a>
               </span>
               </div>
               <div className="about-imgs">
-                <img src="images/McCoyMeade.jpg"></img>
+                <img src="images/McCoyMeade.jpg" alt="Meade McCoy"></img>
                 Meade McCoy
                 <span>
                   <a href="https://www.linkedin.com/in/meademccoy/">Linkedin</a>
