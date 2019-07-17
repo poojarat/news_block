@@ -9,20 +9,22 @@ const ArticlesModal = props => {
       showCloseIcon={false}
       center
       modalId="modal"
+      closeIconId={true}
     >
       <ul>
         {
           props.articles.map(article => (
+            
             <li key={article.url}>
               <h3>{<a target="_blank" href={article.url}>{article.title}</a>}</h3>
               <h4>{article.description}</h4>
               <p>
                 {article.content}
               </p>
-              <div>
+              <div className="srcstyles">
                 {article.source.name}
               </div>
-              <hr/>
+              <hr className="hrspace"/>
               
             </li>
           ))

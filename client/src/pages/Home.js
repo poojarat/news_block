@@ -60,7 +60,7 @@ const Home = (props) => (
   </header>
   <div className="timeblock">
     <CurrentDate /> <span>|</span>
-    <h2>Todays news for a better world</h2>
+    <h2>Today's news for a better world</h2>
   </div>
   <main>
 

@@ -246,3 +246,34 @@ main {
 .clickable {
   cursor: pointer;
 }
+
+/* MODAL STYLING */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-right: 2rem;
+  padding-left: 3rem;
+  height: 85vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  line-height: 1.5rem;
+}
+
+a:link{
+  color: maroon;
+}
+
+li{
+  margin-top: 1.5rem;
+}
+
+hr{
+  width: 100%;
+  margin-top: .7rem;
+}
+
+.srcstyles{
+  font-weight: bolder;
+}
