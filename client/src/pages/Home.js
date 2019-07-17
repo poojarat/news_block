@@ -28,19 +28,19 @@ const CATEGORIES_LIST = [
     {
       category: 'Business',
       styles: {
-        backgroundColor: "rgb(255, 198, 53)"
+        backgroundColor: "rgb(240, 222, 61)"
       }
     },
     {
       category: 'Technology',
       styles: {
-        backgroundColor: "rgb(255, 92, 53)"
+        backgroundColor: "rgb(255, 198, 53)"
       }
     },
     {
       category: 'Science',
       styles: {
-        backgroundColor: "rgb(255, 198, 53)"
+        backgroundColor: "rgb(221, 148, 98)"
       }
     },
   ]
@@ -96,7 +96,7 @@ class Home extends React.Component  {
   </header>
   <div className="timeblock">
     <CurrentDate /> <span>|</span>
-    <h2>Todays news for a better world</h2>
+    <h2>Today's news for a better world</h2>
   </div>
   <main>
 

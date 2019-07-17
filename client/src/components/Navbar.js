@@ -5,7 +5,6 @@ const Navbar = () => (
       <header>
         <nav id="navbox">
           <span>
-            <NavLink exact to="/">Menu</NavLink>
           </span>
           <span id="logo">
             News Block
