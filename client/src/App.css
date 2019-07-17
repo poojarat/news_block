@@ -147,7 +147,6 @@ input{
   line-height: 30px;
   outline: 0;
   border: 0;
-  display: none;
   font-size: 1em;
   border-radius: 50px;
   padding: 0 20px;
@@ -168,7 +167,7 @@ input{
   transition: all 1s;
 }
 
-form:hover{
+form:hover, form.filled{
   position: relative;
   left: 4rem;
   width: 10rem;
@@ -179,6 +178,7 @@ form:hover{
   background-image: url('/client/public/images')
 }
 
+<<<<<<< HEAD
 form:hover input{
   display: block;
   font-family: 'Roboto', sans-serif;
@@ -195,6 +195,8 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 
+=======
+>>>>>>> 200a5bea54f8a7eba1085d1a885d8faf6dee89ad
 /* END NAVBAR */
 
 /* Time stamp */
