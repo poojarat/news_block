@@ -7,30 +7,48 @@
   #navsrch{
     width: 100%;
   }
+  #navbox{
+    width: 90%;
+  }
   .windows{
     margin-top: 1rem !important;
   }
-  #logo{
-    font-size: 2.5rem !important;
+  .clickable h1{
+    font-size: 1.2rem !important;
   }
-  .windows div{
-    width: 100% !important;
-    height: 30vh !important;
+  #logo{
+    font-size: 1.8rem !important;
   }
   .timeblock{
-    font-size: .6rem;
+    width: 100%;
     padding-top: 1rem;
   }
   .clockstyles{
     font-size: 1rem !important;
+    margin-right: 3.4rem;
   }
-
-  main h1 {
-    font-size: 1rem;
+  .dissapear{
+    display: none;
   }
-
+  #resize:hover{
+    position: relative;
+    left: 4rem;
+    width: 6rem;
+    cursor: pointer;
   }
-
+  .menustyles h3{
+    font-size: 1.5rem;
+  }
+  .menustyles{
+    height: 18rem !important;
+    width: 11rem !important;
+    padding-top: 4rem !important;
+    padding-left: 3rem !important;
+    line-height: 3.4rem !important;
+    font-size: 2rem !important;
+    z-index: 4 !important;
+  }
+}
 
 /* START */
 a:link{
@@ -53,6 +71,7 @@ body{
   flex-flow: column;
   position: relative;
   height: auto;
+  width: 100%;
   min-height: 100% !important;
   object-fit: cover;
   background-color:rgb(68, 146, 180) ;
@@ -174,10 +193,6 @@ form:hover, form.filled{
   cursor: pointer;
 }
 
-.fa-search{
-  background-image: url('/client/public/images')
-}
-
 form:hover input{
   display: block;
   font-family: 'Roboto', sans-serif;
@@ -205,7 +220,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   justify-content: center;
   align-items: center;
   height: 3rem;
-  padding-left: 4rem;
 }
 
 
@@ -228,6 +242,7 @@ main {
 #right-side{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  
 }
 
 #topnews{
@@ -247,6 +262,13 @@ main {
 .clickable {
   cursor: pointer;
 }
+
+.clickable h1{
+  font-family: 'DM Serif Display', serif;
+  font-size: 3rem;
+  font-style: italic;
+}
+
 
 /* MODAL STYLING */
 
@@ -280,5 +302,5 @@ hr{
 }
 
 .clickable:active{
-  background-color: red !important;
+  background-color: rgb(255, 198, 53) !important;
 }
