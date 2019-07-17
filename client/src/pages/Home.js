@@ -10,37 +10,37 @@ const CATEGORIES_LIST = [
     {
       category: 'Sports',
       styles: {
-        backgroundColor: "rgb(255, 120, 53)"
+        backgroundColor: "rgb(11, 106, 147)"
       }
     },
     {
       category: 'Health',
       styles: {
-        backgroundColor: "rgb(210, 95, 53)"
+        backgroundColor: "rgb(21,129,125)"
       }
     },
     {
       category: 'Entertainment',
       styles: {
-        backgroundColor: "rgb(255, 92, 53)"
+        backgroundColor: "rgb(74,143,149)"
       }
     },
     {
       category: 'Business',
       styles: {
-        backgroundColor: "rgb(240, 222, 61)"
+        backgroundColor: "rgb(39,80,145)"
       }
     },
     {
       category: 'Technology',
       styles: {
-        backgroundColor: "rgb(255, 198, 53)"
+        backgroundColor: "rgb(5,97,137)"
       }
     },
     {
       category: 'Science',
       styles: {
-        backgroundColor: "rgb(221, 148, 98)"
+        backgroundColor: "rgb(48,137,149)"
       }
     },
   ]
