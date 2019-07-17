@@ -13,7 +13,7 @@ const DropDown = (props) => {
   return (
   <div>
     <div className="navwraper" onClick={props.toggleNav}>
-      <img className="navbutton" src="images/newspaper.png" alt="button"></img>
+      <img className="navbutton" src="../images/icons8-menu-50.png" alt="button"></img>
       {menu}
     </div>
   </div>
