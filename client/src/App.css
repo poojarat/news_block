@@ -147,7 +147,6 @@ input{
   line-height: 30px;
   outline: 0;
   border: 0;
-  display: none;
   font-size: 1em;
   border-radius: 50px;
   padding: 0 20px;
@@ -168,7 +167,7 @@ input{
   transition: all 1s;
 }
 
-form:hover{
+form:hover, form.filled{
   position: relative;
   left: 4rem;
   width: 10rem;
@@ -177,11 +176,6 @@ form:hover{
 
 .fa-search{
   background-image: url('/client/public/images')
-}
-
-form:hover input{
-  display: block;
-  font-family: 'Roboto', sans-serif;
 }
 
 /* END NAVBAR */
