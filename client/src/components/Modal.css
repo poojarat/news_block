@@ -4,8 +4,11 @@
   filter: invert(85%)
 }
 
-
 img:hover {
   cursor: pointer;
 
+}
+
+img {
+  height: 4rem;
 }
