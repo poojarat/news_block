@@ -13,7 +13,6 @@ class SearchBar extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault()
     this.props.getNews(this.state.input)
-    console.log(this.state.input)
   }
 
   render(){
