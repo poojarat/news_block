@@ -9,7 +9,6 @@ const ArticlesModal = props => {
       showCloseIcon={false}
       center
       modalId="modal"
-      closeIconId={true}
     >
       <ul>
         {
