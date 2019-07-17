@@ -46,7 +46,6 @@ a:visited{
   margin: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  /* border: solid black 1px; */
 }
 
 body{
@@ -66,7 +65,6 @@ body{
   bottom: 0;
   object-fit: cover;
   background-color: lightgray;
-  /* border: solid 2px black; */
 }
 
 #demo h1{
@@ -181,13 +179,6 @@ form:hover{
   background-image: url('/client/public/images')
 }
 
-form:active{
-  position: relative;
-  left: 4rem;
-  width: 10rem;
-  cursor: pointer;
-}
-
 form:hover input{
   display: block;
   font-family: 'Roboto', sans-serif;
@@ -229,6 +220,10 @@ main {
   grid-template-columns: 1fr 1fr;
 }
 
+#topnews{
+  background-color: rgb(226, 21, 53);
+}
+
 #topnews, #right-side{
   height: calc(100vh - 144px);
 }
@@ -241,4 +236,35 @@ main {
 
 .clickable {
   cursor: pointer;
+}
+
+/* MODAL STYLING */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-right: 2rem;
+  padding-left: 3rem;
+  height: 85vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  line-height: 1.5rem;
+}
+
+a:link{
+  color: maroon;
+}
+
+li{
+  margin-top: 1.5rem;
+}
+
+hr{
+  width: 100%;
+  margin-top: .7rem;
+}
+
+.srcstyles{
+  font-weight: bolder;
 }
