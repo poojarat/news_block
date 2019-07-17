@@ -1,5 +1,4 @@
 import React from 'react';
-// import '../App.css';
 import './About.css'
 import SearchBar from '../components/SearchBar'
 import CurrentDate from '../components/CurrentDate'
@@ -67,6 +66,9 @@ class About extends React.Component {
               Mixolidia Gautreaux
               <span>
                 <a href="https://github.com/mixolidia">GitHub</a>
+              </span>
+              <span>
+                <a href="http://linkedin.com/in/mixolidia">Linkediin</a>
               </span>
             </div>
             <div className="about-imgs">
