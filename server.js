@@ -7,11 +7,9 @@ const path = require("path")
 const app = express()
 const axios = require("axios")
 
-// END DEMO
-
 //API call for keyword search on home page
 app.get('/search/:query', (request, response) => {
-  axios.get(`https://newsapi.org/v2/everything?q=${request.params.query}&apiKey=${process.env.NA_API_KEY}`)
+  axios.get(`https://newsapi.org/v2/everything?language=en&q=${request.params.query}&apiKey=${process.env.NA_API_KEY}`)
     .then(newsResponse => {
       response.send(newsResponse.data)
     })
