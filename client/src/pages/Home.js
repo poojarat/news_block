@@ -84,7 +84,7 @@ class Home extends React.Component  {
   <header>
     <nav id="navbox">
       <span>
-        <DropDown toggleNav={ this.toggleNav } show={ this.show }/>
+        <DropDown toggleNav={ this.toggleNav } show={ this.state.showNav }/>
       </span>
       <span id="logo">
         News Block

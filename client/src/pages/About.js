@@ -4,6 +4,7 @@ import SearchBar from '../components/SearchBar'
 import CurrentDate from '../components/CurrentDate'
 import DropDown from '../components/DropMenu/DropMenu'
 import axios from 'axios'
+import ArticlesModal from '../components/Modal.js'
 
 class About extends React.Component {
   state = { 
@@ -29,6 +30,10 @@ class About extends React.Component {
       this.setState({ showNav: true })
     }
   }
+
+  closeModal = () => {
+    this.setState({ modalOpen: false })
+  }
   
   render() {
     return(
@@ -36,7 +41,7 @@ class About extends React.Component {
     <header>
       <nav id="navbox">
         <span>
-          <DropDown toggleNav={ this.toggleNav } show={ this.show }/>
+          <DropDown toggleNav={ this.toggleNav } show={ this.state.showNav }/>
         </span>
         <span id="logo">
           News Block
@@ -62,6 +67,11 @@ class About extends React.Component {
       <p>Meade McCoy (UX/UI)</p>
       <h2>Powered by NewsApi</h2>
     </div>
+    <ArticlesModal 
+      open={this.state.modalOpen}
+      articles={this.state.articles}
+      closeModal={this.closeModal}
+    />
     </React.Fragment>
     )
   }
