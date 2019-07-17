@@ -108,8 +108,8 @@ header{
 .menustyles{
   position: absolute;
   left: 60;
-  height: 50vh;
-  width: 46vh;
+  height: 44vh;
+  width: 33vh;
   padding-top: 6rem;
   padding-left: 3rem;
   line-height: 4rem;
@@ -178,7 +178,6 @@ form:hover, form.filled{
   background-image: url('/client/public/images')
 }
 
-<<<<<<< HEAD
 form:hover input{
   display: block;
   font-family: 'Roboto', sans-serif;
@@ -195,8 +194,6 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 
-=======
->>>>>>> 200a5bea54f8a7eba1085d1a885d8faf6dee89ad
 /* END NAVBAR */
 
 /* Time stamp */

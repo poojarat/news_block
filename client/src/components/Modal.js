@@ -13,7 +13,7 @@ const ArticlesModal = props => {
     <Modal
       open={props.open}
       onClose={props.closeModal}
-      showCloseIcon={false}
+      showCloseIcon={true}
       center
       modalId="modal"
     >
