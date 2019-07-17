@@ -13,8 +13,19 @@ const ArticlesModal = props => {
       <ul>
         {
           props.articles.map(article => (
+            
             <li key={article.url}>
-              <a target="_blank" href={article.url}>{article.title}</a>
+              <h3>{<a target="_blank" href={article.url}>{article.title}</a>}</h3>
+              <span>{ article.publishedAt.slice(0, 10) }</span>
+              <h4>{article.description}</h4>
+              <p>
+                {article.content}
+              </p>
+              <div className="srcstyles">
+                {article.source.name}
+              </div>
+              <hr className="hrspace"/>
+              
             </li>
           ))
         }

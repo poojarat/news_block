@@ -4,8 +4,6 @@ import { NavLink } from 'react-router-dom'
 const Navbar = () => (
       <header>
         <nav id="navbox">
-          <span>
-          </span>
           <span id="logo">
             News Block
           </span>
