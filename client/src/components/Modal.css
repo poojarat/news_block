@@ -1,3 +1,10 @@
+
+/* LIGHT?DARK TOGGLE */
 .dark {
   filter: invert(85%)
+}
+
+img:hover {
+  cursor: pointer;
+
 }
