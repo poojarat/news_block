@@ -1,7 +1,14 @@
 import React from 'react'
 import Modal from 'react-responsive-modal'
+import './Modal.css'
+
+const toggleDark = () => {
+  let modal = document.querySelector("div.styles_modal__gNwvD")
+  modal.classList.toggle('dark')
+}
 
 const ArticlesModal = props => {
+
   return(
     <Modal
       open={props.open}
@@ -10,6 +17,8 @@ const ArticlesModal = props => {
       center
       modalId="modal"
     >
+      <button onClick={ toggleDark } >toggle</button>
+
       <ul>
         {
           props.articles.map(article => (
