@@ -14,7 +14,7 @@ const ArticlesModal = props => {
       open={props.open}
       onClose={props.closeModal}
       showCloseIcon={true}
-      center
+      left
       modalId="modal"
     >
       <img  onClick={ toggleDark }  src="images/noun_day_and_night_small.png" alt="sun and moon, light and dark toggle" />

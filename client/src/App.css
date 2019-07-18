@@ -91,6 +91,13 @@ body{
   place-items: center;
 }
 
+body, html{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 
 /* Navbar styling below this line */
 
