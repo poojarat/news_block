@@ -17,7 +17,7 @@
     font-size: 1.2rem !important;
   }
   #logo{
-    font-size: 1.8rem !important;
+    font-size: 1.7rem !important;
   }
   .timeblock{
     width: 100%;
@@ -32,8 +32,8 @@
   }
   #resize:hover{
     position: relative;
-    left: 4rem;
-    width: 6rem;
+    left: 2rem;
+    width: 5.7rem;
     cursor: pointer;
   }
   .menustyles h3{
@@ -54,10 +54,11 @@
 a:link{
   text-decoration: none;
   font-family: 'DM Serif Display', serif;
+  color: black;
 }
 
 a:visited{
-  color: black;
+  color: rgb(38, 38, 38);
 }
 
 *{
@@ -275,7 +276,6 @@ main {
 .clickable h1{
   font-family: 'DM Serif Display', serif;
   font-size: 3rem;
-  font-style: italic;
 }
 
 
@@ -308,4 +308,8 @@ hr{
 
 .clickable:active{
   background-color: rgb(255, 198, 53) !important;
+}
+
+.styles_modal__gNwvD{
+  width: 100%;
 }

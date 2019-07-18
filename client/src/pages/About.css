@@ -1,3 +1,59 @@
+@media  (max-width: 880px) {
+  #navbox span {
+    font-size: 1rem;
+  }
+  #navsrch{
+    width: 100%;
+  }
+  #navbox{
+    width: 90%;
+  }
+  .windows{
+    margin-top: 1rem !important;
+  }
+  .clickable h1{
+    font-size: 1.2rem !important;
+  }
+  #logo{
+    font-size: 1.7rem !important;
+  }
+  .timeblock{
+    width: 100%;
+    font-size: 0rem;
+    padding-top: 1rem;
+  }
+  .clockstyles{
+    font-size: 1rem !important;
+    margin-right: -1.6rem;
+  }
+  .about-container-1 {
+    margin-top: 2%;
+    font-size: 2rem !important;
+    font-family: 'Spectral', serif;
+  }
+  .dissapear{
+    display: none;
+  }
+  #resize:hover{
+    position: relative;
+    left: 2rem;
+    width: 5.7rem;
+    cursor: pointer;
+  }
+  .menustyles h3{
+    font-size: 1.5rem;
+  }
+  .menustyles{
+    height: 18rem !important;
+    width: 11rem !important;
+    padding-top: 4rem !important;
+    padding-left: 3rem !important;
+    line-height: 3.4rem !important;
+    font-size: 2rem !important;
+    z-index: 4 !important;
+  }
+}
+
 #about-box {
   height: 100vh;
   margin: 0 15%;
@@ -43,9 +99,4 @@
   max-width: 35%;
   height: auto;
   cursor: auto;
-}
-
-
-a:visited {
-  color: black;
 }
