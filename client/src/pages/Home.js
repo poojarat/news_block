@@ -16,31 +16,31 @@ const CATEGORIES_LIST = [
     {
       category: 'Health',
       styles: {
-        backgroundColor: "rgb(21,129,125)"
+        backgroundColor: "rgb(21, 129, 125)"
       }
     },
     {
       category: 'Entertainment',
       styles: {
-        backgroundColor: "rgb(74,143,149)"
+        backgroundColor: "rgb(74, 143, 149)"
       }
     },
     {
       category: 'Business',
       styles: {
-        backgroundColor: "rgb(39,80,145)"
+        backgroundColor: "rgb(39, 80, 145)"
       }
     },
     {
       category: 'Technology',
       styles: {
-        backgroundColor: "rgb(5,97,137)"
+        backgroundColor: "rgb(5, 97, 137)"
       }
     },
     {
       category: 'Science',
       styles: {
-        backgroundColor: "rgb(48,137,149)"
+        backgroundColor: "rgb(48, 137, 149)"
       }
     },
   ]
@@ -108,10 +108,11 @@ class Home extends React.Component  {
           </div>
           <div id="right-side">
             {
-              CATEGORIES_LIST.map(category => (
+              CATEGORIES_LIST.map((category, i) => (
                 <div
                   key={category.category}
                   className="clickable category"
+                  id={`cat${i}`}
                   style={category.styles}
                   onClick={ () => this.categoryArticles(category.category)}
                 >

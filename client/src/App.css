@@ -259,6 +259,18 @@ main {
   background-color: rgb(110, 176, 204);
 }
 
+#topnews:hover {
+  cursor: pointer;
+  background-color: rgba(110, 176, 204, 0.6) !important;
+}
+
+#topnews:active {
+  background-color: rgb(255, 198, 53) !important;
+  transition: ease-in-out;
+  transform: scale(.97);
+  transition: .3s;
+}
+
 #topnews, #right-side{
   height: calc(100vh - 144px);
 }
@@ -269,8 +281,76 @@ main {
   text-align: center;
 }
 
-.clickable {
+#cat0:hover {
   cursor: pointer;
+  background-color: rgba(11, 106, 147, 0.6) !important;
+}
+
+#cat0:active {
+  background-color: rgb(255, 198, 53) !important;
+  transition: ease-in-out;
+  transform: scale(.97);
+  transition: .3s;
+}
+
+#cat1:hover {
+  cursor: pointer;
+  background-color: rgba(21, 129, 125, 0.6) !important;
+}
+
+#cat1:active {
+  background-color: rgb(255, 198, 53) !important;
+  transition: ease-in-out;
+  transform: scale(.97);
+  transition: .3s;
+}
+
+#cat2:hover {
+  cursor: pointer;
+  background-color: rgba(74, 143, 149, 0.6) !important;
+}
+
+#cat2:active {
+  background-color: rgb(255, 198, 53) !important;
+  transition: ease-in-out;
+  transform: scale(.97);
+  transition: .3s;
+}
+
+#cat3:hover {
+  cursor: pointer;
+  background-color: rgba(39, 80, 145, 0.6) !important;
+}
+
+#cat3:active {
+  background-color: rgb(255, 198, 53) !important;
+  transition: ease-in-out;
+  transform: scale(.97);
+  transition: .3s;
+}
+
+#cat4:hover {
+  cursor: pointer;
+  background-color: rgba(5, 97, 137, 0.6) !important;
+}
+
+#cat4:active {
+  background-color: rgb(255, 198, 53) !important;
+  transition: ease-in-out;
+  transform: scale(.97);
+  transition: .3s;
+}
+
+#cat5:hover {
+  cursor: pointer;
+  background-color: rgba(48, 137, 149, 0.6) !important;
+}
+
+#cat5:active {
+  background-color: rgb(255, 198, 53) !important;
+  transition: ease-in-out;
+  transform: scale(.97);
+  transition: .3s;
 }
 
 .clickable h1{
@@ -307,7 +387,6 @@ hr{
 }
 
 .clickable:active{
-  background-color: rgb(255, 198, 53) !important;
 }
 
 #modal{
