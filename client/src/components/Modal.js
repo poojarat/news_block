@@ -16,9 +16,9 @@ const ArticlesModal = props => {
       center
       modalId="modal"
     >
-      
-      <div>
-        <img  onClick={ toggleDark }  src="images/noun_day_and_night_small.png" alt="sun and moon, light and dark toggle" />
+
+      <div id="modal-header">
+        <img onClick={ toggleDark } src="images/noun_day_and_night_small.png" alt="sun and moon, light and dark toggle" />
         <h1>{props.category}</h1>
       </div>
 

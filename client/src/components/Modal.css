@@ -1,4 +1,8 @@
-
+@media  (max-width: 880px) {
+  modal-header {
+    font-size: 2rem;
+  }
+}
 /* LIGHT?DARK TOGGLE */
 .dark {
   filter: invert(85%)
@@ -6,9 +10,24 @@
 
 img:hover {
   cursor: pointer;
-
 }
 
 img {
   height: 3rem;
+}
+
+#modal-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 8vh;
+  border-bottom: solid black 3px;
+}
+
+#modal-header img {
+  margin-right: 6%;
+}
+
+#modal-header h1 {
+  font-size: 3rem;
 }
