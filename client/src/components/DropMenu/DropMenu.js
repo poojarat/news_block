@@ -9,7 +9,6 @@ const DropDown = (props) => {
     menu = <Menu/>
   }
 
-  console.log(props.show)
   return (
   <div>
     <div className="navwraper" onClick={props.toggleNav}>

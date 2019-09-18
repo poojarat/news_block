@@ -2,9 +2,9 @@ import React from 'react';
 import '../App.css';
 import SearchBar from '../components/SearchBar'
 import CurrentDate from '../components/CurrentDate'
-import DropDown from '../components/DropMenu/DropMenu';
 import ArticlesModal from '../components/Modal.js'
 import axios from 'axios'
+import DropDown from '../components/DropMenu/DropMenu';
 
 const CATEGORIES_LIST = [
     {
@@ -62,12 +62,12 @@ class Home extends React.Component  {
 
   getNews = (input) => {
     axios.get(`/search/${input}`)
-       .then(({data}) => {
+      .then(({data}) => {
         const articles = data.articles,
         articlesLength = articles.length;
         this.setState({ modalOpen: true, articles: articlesLength ? articles : [] })
       })
-      .catch(err => console.log(err));
+    .catch(err => console.log(err));
   }
 
   closeModal = () => {
@@ -77,7 +77,9 @@ class Home extends React.Component  {
   categoryArticles = (category) => {
     axios.get(`/api/${category}`)
       .then((response) => this.setState({articles: response.data, modalOpen: true}))
+    .catch(err => console.log(err))
   }
+  
   render() {
     return (
       <div>

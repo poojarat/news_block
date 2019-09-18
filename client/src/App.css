@@ -1,44 +1,54 @@
 /* @Media */
 
 @media  (max-width: 880px) {
-  #navbox span {
+  /* #navbox span {
     font-size: 1rem;
-  }
+  } */
   #navsrch{
     width: 100%;
   }
+
   #navbox{
-    width: 90%;
+    width: 100% !important;
   }
+
   .windows{
     margin-top: 1rem !important;
   }
+
   .clickable h1{
     font-size: 1.2rem !important;
   }
+
   #logo{
-    font-size: 1.7rem !important;
+    font-size: 1.4rem !important;
   }
+
   .timeblock{
     width: 100%;
     padding-top: 1rem;
   }
+
   .clockstyles{
     font-size: 1rem !important;
     margin-right: 3.4rem;
   }
+
   .dissapear{
     display: none;
   }
+
   #resize:hover{
     position: relative;
     left: 2rem;
     width: 5.7rem;
     cursor: pointer;
   }
+
   .menustyles h3{
     font-size: 1.5rem;
   }
+  
   .menustyles{
     height: 18rem !important;
     width: 11rem !important;
@@ -114,6 +124,13 @@ header{
   justify-content: space-around;
   width: 100%;
   height: 6rem;
+}
+
+#navbox span {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #navbox span form{
@@ -200,7 +217,6 @@ form:hover, form.filled{
   width: 10rem;
   cursor: pointer;
 }
-
 
 form:hover input{
   display: block;
