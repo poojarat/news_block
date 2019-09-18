@@ -49,7 +49,8 @@ class Home extends React.Component  {
   state = { 
     showNav: false,
     modalOpen: false,
-    articles: []
+    articles: [],
+    currentCategory: ""
   }
 
   toggleNav = () => {
@@ -76,7 +77,7 @@ class Home extends React.Component  {
 
   categoryArticles = (category) => {
     axios.get(`/api/${category}`)
-      .then((response) => this.setState({articles: response.data, modalOpen: true}))
+      .then((response) => this.setState({articles: response.data, modalOpen: true, currentCategory: `${category}`}))
     .catch(err => console.log(err))
   }
   
@@ -125,6 +126,7 @@ class Home extends React.Component  {
           </div>
         </main>
         <ArticlesModal
+          category={this.state.currentCategory}
           open={this.state.modalOpen}
           articles={this.state.articles}
           closeModal={this.closeModal}

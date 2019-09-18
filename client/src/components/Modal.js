@@ -8,7 +8,6 @@ const toggleDark = () => {
 }
 
 const ArticlesModal = props => {
-
   return(
     <Modal
       open={props.open}
@@ -17,12 +16,15 @@ const ArticlesModal = props => {
       center
       modalId="modal"
     >
-      <img  onClick={ toggleDark }  src="images/noun_day_and_night_small.png" alt="sun and moon, light and dark toggle" />
+      
+      <div>
+        <img  onClick={ toggleDark }  src="images/noun_day_and_night_small.png" alt="sun and moon, light and dark toggle" />
+        <h1>{props.category}</h1>
+      </div>
 
       <ul>
         {
           props.articles.map(article => (
-            
             <li key={article.url}>
               <h3>{<a target="_blank" rel="noopener noreferrer" href={article.url}>{article.title}</a>}</h3>
               <span>{ article.publishedAt.slice(0, 10) }</span>
