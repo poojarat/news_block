@@ -130,7 +130,7 @@ class Home extends React.Component  {
           open={this.state.modalOpen}
           articles={this.state.articles}
           closeModal={this.closeModal}
-          />
+        />
       </div>
     )
   }

@@ -1,7 +1,4 @@
-@media  (max-width: 880px) {
-  #navbox span {
-    font-size: 1rem;
-  }
+/* @media  (max-width: 880px) {
   #navsrch{
     width: 100%;
   }
@@ -13,9 +10,6 @@
   }
   .clickable h1{
     font-size: 1.2rem !important;
-  }
-  #logo{
-    font-size: 1.7rem !important;
   }
   .timeblock{
     width: 100%;
@@ -52,7 +46,7 @@
     font-size: 2rem !important;
     z-index: 4 !important;
   }
-}
+} */
 
 #about-box {
   height: 100vh;

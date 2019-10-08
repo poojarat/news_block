@@ -58,6 +58,40 @@
     font-size: 2rem !important;
     z-index: 4 !important;
   }
+
+  form {
+    height: 30px;
+    width: 30px;
+  }
+
+  input{
+    width: 100%;
+    height: 26.5px;
+    line-height: 30px;
+    font-size: 1em;
+  }
+  
+  .fa{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 26.5px;
+    height: 26.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.4rem;
+    transition: all 1s;
+  }
+  
+  form:hover, form.filled{
+    position: relative;
+    left: 4rem;
+    width: 10rem;
+    cursor: pointer;
+  }
 }
 
 /* START */
