@@ -1,10 +1,11 @@
 import React from 'react';
 import '../App.css';
-import SearchBar from '../components/SearchBar'
+// import SearchBar from '../components/SearchBar'
 import CurrentDate from '../components/CurrentDate'
 import ArticlesModal from '../components/Modal.js'
 import axios from 'axios'
-import DropDown from '../components/DropMenu/DropMenu';
+// import DropDown from '../components/DropMenu/DropMenu';
+import NavBar from '../components/Navbar';
 
 const CATEGORIES_LIST = [
     {
@@ -84,32 +85,36 @@ class Home extends React.Component  {
   render() {
     return (
       <div>
-        <header>
-          <nav id="navbox">
-            <span>
-              <DropDown toggleNav={ this.toggleNav } show={ this.state.showNav }/>
-            </span>
-            <span id="logo">
-              News Block
-            </span>
-            <span>
-              <SearchBar getNews={ this.getNews } />
-            </span>
-          </nav>
-        </header>
-        <div className="timeblock">
-          <CurrentDate /> <span className="dissapear">|</span>
-          <h2 className="dissapear">Today's News For a Better World</h2>
+        <NavBar 
+          toggleNav={ this.toggleNav } 
+          show={ this.state.showNav } 
+          getNews={ this.getNews }
+        />
+        <div 
+          className="timeblock"
+        >
+          <CurrentDate /> 
+          <span 
+            className="dissapear"
+          >|
+          </span>
+          <h2 
+            className="dissapear"
+          >
+            Today's News For a Better World
+          </h2>
         </div>
         <main>
-          <div
-            id="topnews"
-            onClick= { () => this.categoryArticles('general')}
+          <div 
+            id="topnews" 
+            onClick= { () => this.categoryArticles('General')} 
             className="clickable"
           >
             <h1>Top News</h1>
           </div>
-          <div id="right-side">
+          <div 
+            id="right-side"
+          >
             {
               CATEGORIES_LIST.map((category, i) => (
                 <div
