@@ -17,7 +17,6 @@ app.get('/search/:query', (request, response) => {
 })
 
 app.get('/api/:category', (request, response) => {
-  // console.log(`https://newsapi.org/v2/top-headlines?category=${request.params.query}&language=en&country=us&apiKey=${process.env.NA_API_KEY}&pageSize=21`)
   axios.get(`https://newsapi.org/v2/top-headlines?category=${request.params.category}&language=en&country=us&apiKey=${process.env.NA_API_KEY}&pageSize=100`)
     .then(categoryResponse => response.json(categoryResponse.data.articles))
   })

@@ -1,10 +1,9 @@
 import React from 'react';
 import './About.css'
-import SearchBar from '../components/SearchBar'
 import CurrentDate from '../components/CurrentDate'
-import DropDown from '../components/DropMenu/DropMenu'
 import axios from 'axios'
 import ArticlesModal from '../components/Modal.js'
+import NavBar from '../components/NavBar/Navbar';
 
 class About extends React.Component {
   state = { 
@@ -15,7 +14,7 @@ class About extends React.Component {
 
   getNews = (input) => {
     axios.get(`/search/${input}`)
-       .then(({data}) => {
+      .then(({data}) => {
         const articles = data.articles,
         articlesLength = articles.length;
         this.setState({ modalOpen: true, articles: articlesLength ? articles : [] })
@@ -38,19 +37,7 @@ class About extends React.Component {
   render() {
     return(
     <React.Fragment>
-      <header>
-        <nav id="navbox">
-          <span>
-            <DropDown toggleNav={ this.toggleNav } show={ this.state.showNav }/>
-          </span>
-          <span id="logo">
-            News Block
-          </span>
-          <span>
-            <SearchBar getNews={ this.getNews } />
-          </span>
-        </nav>
-      </header>
+      <NavBar />
       <div className="timeblock">
         <CurrentDate /> <span>|</span>
         <h2>Todays news for a better world</h2>
