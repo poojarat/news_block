@@ -1,6 +1,6 @@
 import React from 'react'
 import DropDown from './DropMenu/DropMenu'
-import SearchBar from './SearchBar'
+import SearchBar from './SearchBar';
 
 
 const NavBar = props => {

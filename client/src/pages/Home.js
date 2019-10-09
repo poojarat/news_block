@@ -1,11 +1,9 @@
 import React from 'react';
 import '../App.css';
-// import SearchBar from '../components/SearchBar'
 import CurrentDate from '../components/CurrentDate'
 import ArticlesModal from '../components/Modal.js'
 import axios from 'axios'
-// import DropDown from '../components/DropMenu/DropMenu';
-import NavBar from '../components/Navbar';
+import NavBar from '../components/NavBar/Navbar';
 
 const CATEGORIES_LIST = [
     {
