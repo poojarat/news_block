@@ -1,9 +1,13 @@
-/* @media  (max-width: 880px) {
+@media  (max-width: 880px) {
   #navsrch{
     width: 100%;
   }
   #navbox{
     width: 90%;
+  }
+  .navbutton {
+    height: 100%;
+    width: 100%;
   }
   .windows{
     margin-top: 1rem !important;
@@ -46,7 +50,7 @@
     font-size: 2rem !important;
     z-index: 4 !important;
   }
-} */
+}
 
 #about-box {
   height: 100vh;

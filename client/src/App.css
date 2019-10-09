@@ -12,6 +12,15 @@
     width: 100% !important;
   }
 
+  .navbutton {
+    height: 100%;
+    width: 100%;
+  }
+
+  #modal-header h1 {
+    font-size: xx-large !important;
+  }
+
   .windows{
     margin-top: 1rem !important;
   }
@@ -92,6 +101,8 @@
     width: 10rem;
     cursor: pointer;
   }
+
+  
 }
 
 /* START */
