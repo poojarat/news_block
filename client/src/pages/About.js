@@ -1,8 +1,6 @@
 import React from 'react';
 import './About.css'
-// import SearchBar from '../components/SearchBar'
 import CurrentDate from '../components/CurrentDate'
-// import DropDown from '../components/DropMenu/DropMenu'
 import axios from 'axios'
 import ArticlesModal from '../components/Modal.js'
 import NavBar from '../components/NavBar/Navbar';

@@ -269,7 +269,18 @@ form:hover input{
   z-index: 0;
 }
 
+#modal-head {
+  display: flex;
 
+}
+
+#modal-head img {
+  padding-right: 1rem;
+}
+
+#modal-head div {
+  display: flex;
+}
 
 /* clears the 'X' from SearchBar Across Multiple Clients */
 input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
